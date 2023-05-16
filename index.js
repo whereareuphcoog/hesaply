@@ -1,6 +1,6 @@
 //static
 const port = 8000
-const dburi = 'mongodb+srv://phcoog:phcoog@cluster0.a4k9d3r.mongodb.net/'
+const dburi = 'mongodb+srv://amhirsizi:amhirsizi@cluster0.a4k9d3r.mongodb.net/'
 //mongodb 
 const mongoose = require("mongoose")
 mongoose.connect(dburi).then(()=>{
