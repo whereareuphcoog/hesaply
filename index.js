@@ -1,6 +1,6 @@
 //static
 const port = 8000
-const dburi = 'mongodb://127.0.0.1:27017/freeshop'
+const dburi = 'mongodb+srv://phcoog:phcoog@cluster0.a4k9d3r.mongodb.net/'
 //mongodb 
 const mongoose = require("mongoose")
 mongoose.connect(dburi).then(()=>{
