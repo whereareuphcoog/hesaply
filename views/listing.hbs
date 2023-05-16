@@ -1,0 +1,39 @@
+<div class="row row-cols-3">
+
+    {{#each products}}
+
+  <div class="col col-6 col-md-4 col-lg-2">
+<a href="/product/{{_id}}" class="text-decoration-none">
+    <div class="card bg-dark text-light zoom-in">
+      <img src="/img/banner/{{banner}}" alt="bein connect" class="card-img-top product-cover" style="border-radius: 3px">
+      <h6 class="card-title" style="margin-left: 5px;margin-right:5px">{{name}}</h6>
+
+      <ul class="list-group list-group-flash bg-dark text-light">
+        <li class="list-group-item bg-dark text-light">{{price}} ₼</li>
+      </ul>
+    </div>
+</a>
+  </div>
+
+    {{/each}}
+
+
+
+
+</div>
+
+
+
+
+
+<style>
+  .product-cover{
+    height: 150px;
+      object-fit: cover;
+
+  }
+  .col{
+    margin-top:7px
+  }
+
+</style>
