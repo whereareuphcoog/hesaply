@@ -1,0 +1,29 @@
+<div class="card" style="width:20rem">
+  <img class="card-img-top" src="/img/static/leobank.jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text"><b>Bank</b><br>
+    Leo Bank
+    </p>
+    <p class="card-text"><b>Kart Nömrəsi</b><br>
+    4098 5844 6230 5952
+    </p>
+    <div class="text-muted">Köçürmə etdikdən sonra bildirişi göndərin.</div>
+    <form action="/check" method="post" enctype="multipart/form-data" >
+    <div class="form-group">
+        <input type="file" required name="check" class="form-control-file">
+    </div>
+    <button type="submit" class="btn btn-primary" style="width: 17rem">Ödəmə Bildir</button>
+
+    </form>
+
+
+  </div>
+</div>
+
+<style>
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+</style>

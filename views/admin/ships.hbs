@@ -1,0 +1,44 @@
+
+<div style="color:white" class="row rounded">
+<h1><b>Son Satışlar:</b></h1>
+  <table class="table rounded bg-dark table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Ürün adı:</th>
+      <th scope="col">Fiyatı:</th>
+      <th scope="col">Alıcı:</th>
+      <th scope="col">Tarih:</th>
+      <th scope="col">Daha Fazla:</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+            {{#each ships}}
+    <tr>
+      <td>{{product_id.name}}</td>
+      <td>{{product_id.price}} ₺</td>
+      <td>{{user_id.username}}</td>
+      <td>{{dateformat date}}</td>
+      <td><a href="/admin/ship/{{_id}}"><button class="btn btn-{{#if arrived}}success text-dark{{else}}warning{{/if}}
+      
+      
+      ">Sifarişi Yanıtla</button></a>
+      {{#if arrived}}
+<i class="bi bi-check-circle"></i>
+{{else}}
+<i class="bi bi-x-circle"></i>
+      {{/if}}
+</td>
+    </tr>
+
+
+    {{/each}}
+
+
+
+  </tbody>
+</table>
+
+</div>

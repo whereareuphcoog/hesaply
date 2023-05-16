@@ -1,0 +1,36 @@
+<form action="/user/register" method="post" enctype="application/x-www-form-urlencoded" class="text-light mx-auto" >
+    <h1><strong>Qeydiyyatdan Keç</strong></h1>
+      <div  class="form-outline  mb-4">
+    <input minlength="5" maxlength="16" required  type="text" id="username" name="username" class="form-control" />
+    <label class="form-label" for="username">İstifadəçi Adı</label>
+  </div>
+
+
+
+  <div  class="form-outline  mb-4">
+    <input type="email" maxlength="60" required  id="email" name="email" class="form-control" />
+    <label class="form-label" for="email">Email</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="password" minlength="8"  maxlength="16" required  id="password" name="password" class="form-control" />
+    <label class="form-label" for="password">Şifrə</label>
+  </div>
+
+
+
+  <button type="submit" style="width: 100px;" class="btn btn-primary btn-block mb-4">Göndər</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Halhazırda qeydiyyatdan keçmisiniz? <a href="/user/login">Daxil Olun</a></p>
+
+</div>
+</form>
+
+<style>
+    .form-outline{
+        width: 350px
+    }
+</style>
+

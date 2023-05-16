@@ -1,0 +1,37 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: white;
+    max-width: 200px;
+  }
+  
+.card.category img {
+    transition: filter 0.3s ease-in-out!important
+    
+  }
+  
+  
+.card.category img:hover {
+    filter: blur(3px)!important;
+  }
+
+
+  .zoom-in {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .zoom-in:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    transform: translate(-1%, -1%);
+  }
+
+body{
+  background-color: #171717;
+  
+}

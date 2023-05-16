@@ -1,0 +1,88 @@
+
+<div class="row">
+  <div class="col-sm-4">
+{{>dashboard_sidebar}}
+
+  </div>
+ 
+ <div style="margin-top: 14px" class="col-sm-8">
+
+<table class="table bg-dark rounded table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Məhsul <i class="bi bi-box-seam-fill"></i></th>
+      <th scope="col">Adı <i class="bi bi-info-circle"></i></th>
+      <th scope="col">Qiymət <i class="bi bi-cash-stack"></i></th>
+      <th scope="col">Alış Tarixi <i class="bi bi-calendar-event-fill"></i></th>
+      <th scope="col">Təslimat <i class="bi bi-airplane"></i></i></th>
+
+    </tr>
+  </thead>
+  <tbody>
+{{#each ships}}
+    <tr>
+   
+        
+ 
+        
+        
+        </th>
+      <td>
+        {{#if arrived}}
+            <button class="btn btn-success" data-toggle="modal" data-target="#{{meta}}">Göstər</button>
+       
+        
+
+<!-- Modal -->
+<div class="modal fade" id="{{meta}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Xeyirli Olsun</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="white-space: pre-wrap;">
+        {{{product}}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+<button class="btn disabled btn-warning">Gözlənir...</button>
+        {{/if}}
+        
+      </td>
+      <td>{{product_id.name}}</td>
+      <td>{{product_id.price}} ₺</td>
+      <td>{{dateformat date}}</td>
+<td>
+      {{#if arrived}}
+<i class="bi bi-check-circle"></i>
+{{else}}
+<i class="bi bi-x-circle"></i>
+      {{/if}}
+
+</td>
+      
+    </tr>
+
+
+{{/each}}
+
+  </tbody>
+</table>
+
+
+
+  </div>
+
+
+</div>
+
+
+

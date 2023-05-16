@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {{#if isadmin}}
+            <li class="nav-item active">
+        <a class="nav-link" href="/admin"><b>Admin </b><span class="sr-only">(current)</span></a>
+      </li>
+  {{/if}}
+      {{#if ismod}}
+            <li class="nav-item active">
+        <a class="nav-link" href="/admin/ships"><b>Yetkili</b> <span class="sr-only">(current)</span></a>
+      </li>
+  {{/if}}
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+      
+        <i class="bi bi-house-door-fill"></i> Ana Səhifə</a>
+      
+      </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/filter"><i class="bi bi-bag-fill"></i> Market</a>
+      </li>
+
+
+    </ul>
+
+        <ul class="navbar-nav ml-auto">
+
+
+
+{{#if loggedin}}
+  <form class="form-inline">
+<a href="/check" target="_blank" class="text-decoration-none">
+    <button class="btn btn-sm btn-outline-secondary"  type="button"><i class="bi bi-cash-stack"></i> Balansı Artır <span class="badge badge-success">Online</span></button>
+    
+    </a>
+  </form>
+
+            <li class="nav-item">
+        <a class="nav-link active"><b>{{userdata.balance}}</b> ₼</a>
+      </li>
+
+
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="bi bi-person-circle"></i> {{userdata.username}}
+        </a>
+        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/user/dashboard"><i class="bi bi-gear-fill"></i> İdarə Paneli</a>
+          <a class="dropdown-item" href="/user/dashboard/ships"><i class="bi bi-bag-check-fill"></i> Alışlar</a>
+          <a class="dropdown-item" href="/user/logout"><i class="bi bi-box-arrow-left"></i> Çıxış Et</a>
+        </div>
+
+
+</li>
+
+
+
+
+{{else}}
+
+      <li class="nav-item">
+        <a class="nav-link" href="/user/login"> Daxil ol</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="/user/register"> Qeydiyyatdan keç</a>
+      </li>
+
+
+
+</li>
+
+{{/if}}
+
+
+</ul>
+
+
+    
+  </div>
+
+</div>
+</nav>
+
+  <div class="cooper d-flex justify-content-center">
+    <h1><a href="/"><img style="width: auto;height:170px;margin-top:14px" src="/img/static/logo_mini.png" alt="FreeShop">
+    
+    </a>
+    <div class="text-light" style="margin-left: 15px">Hesaply</div></h1>
+
+
+    </div>

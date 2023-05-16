@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-4">
+{{>dashboard_sidebar}}
+
+  </div>
+  <div class="col-sm-5  text-light">
+
+  <h3>Xoş günlər, <strong>{{user.username}}</strong>{{#if isadmin}} <span style="font-size:14px" class="badge badge-info">Admin</span>{{/if}}{{#if ismod}} <span style="font-size:14px" class="badge badge-primary">Mod</span>{{/if}}</h3>
+  
+  <div class="card  bg-dark">
+  <div class="card-body">
+    Email ünvanınız: <strong> {{user.email}}</strong> <br>
+    Balansınız: <strong>{{user.balance}}</strong> TL
+  </div>
+</div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<form action="/user/login" method="post" enctype="application/x-www-form-urlencoded" class="text-light mx-auto" >
+    <h1><strong>Daxil Ol</strong></h1>
+  <div  class="form-outline  mb-4">
+    <input type="email" id="email" maxlength="60" required name="email" class="form-control" />
+    <label class="form-label" for="email">Email</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="password"  maxlength="16" id="password" required name="password" class="form-control" />
+    <label class="form-label" for="password">Şifrə</label>
+  </div>
+
+
+
+  <button type="submit" style="width: 100px;" class="btn btn-primary btn-block mb-4">Gönder</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Hesabınız yoxdur? <a href="/user/register">Qeydiyyatdan Keçin</a></p>
+
+</div>
+</form>
+
+<style>
+    .form-outline{
+        width: 350px
+    }
+</style>

@@ -1,0 +1,56 @@
+<div class="admin text-light" >
+<h1>İyi günler, <b>{{admin.username}}</b></h1>
+
+
+
+        <h4><b>İşlemler:</b></h4>
+        <p>
+<a href="/admin/new-product"><button class="btn btn-warning" >Yeni ürün</button></a>
+<a href="/admin/ships"><button class="btn btn-warning" >Son Satışlar</button></a>
+<a href="/admin/check"><button class="btn btn-warning" >Ödemeler</button></a>
+<a href="/admin/balance"><button class="btn btn-warning" >Bakiyelerini Artir</button></a>
+
+        </p>
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <h4><b>Ürünler:</b></h4>
+
+<table class="table rounded bg-dark table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Ürün adı:</th>
+      <th scope="col">Fiyatı:</th>
+      <th scope="col">Daha fazla</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+            {{#each products}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{price}}</td>
+      <td><a href="/admin/product/{{_id}}"><button class="btn btn-primary">Düzenle</button></a></td>
+
+    </tr>
+
+
+    {{/each}}
+
+
+
+  </tbody>
+</table>
+
+
+
+
+    </div>
+
+</div>
+
+
+</div>
+

@@ -1,0 +1,25 @@
+<div style="margin-top: 14px; color:white" class="card bg-dark">
+  <div class="card-header">
+    {{ship.product_id.name}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{ship.product_id.price}} TL, Alıcı: <b>{{ship.user_id.username}}</b></p>
+      <footer class="blockquote-footer">{{dateformat ship.date}}</footer>
+    </blockquote>
+  </div>
+</div>
+
+<form action="/admin/ship/{{ship._id}}" method="post" enctype="application/x-www-form-urlencoded">
+<h4 style="color:white">Yanıt:</h4>
+<textarea rows="3" name="product" class="form-control" id="product"></textarea>
+<div style="margin-top: 14px" class="buttons">
+<button class="btn btn-success" type="submit">Gönder</button>
+
+</div>
+
+</form>
+
+<a  href="/admin/ship/{{ship._id}}/no-stock">
+<button style="margin-top: 14px" class="btn btn-danger" type="submit">Stok Yok</button>
+</a>

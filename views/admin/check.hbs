@@ -1,0 +1,20 @@
+<div class="row">
+    {{#each payments}}
+    <div class="col-sm-12">
+        <div class="card bg-dark text-light" >
+            <img src="/img/check/{{check}}" alt="" class="card-img-top">
+        
+                <div class="card-body text-light">
+            <b>user:</b> {{user.username}}
+        </div>
+        </div>
+
+    </div>
+    {{/each}}
+
+</div>
+<style>
+    .card{
+        margin-top: 5px;
+    }
+</style>
